@@ -6,15 +6,11 @@
 
 enum LANGUAGES
 {
-    GB,
     NUMBER_OF_LANGUAGES
 };
 
 enum TEXTS
 {
-    T___SINGLEUSE_88K7,
-    T___SINGLEUSE_F168,
-    T___SINGLEUSE_QAQC,
     NUMBER_OF_TEXT_KEYS
 };
 
