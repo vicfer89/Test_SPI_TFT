@@ -69,6 +69,17 @@ void Error_Handler(void);
 #define RESET_GPIO_Port GPIOA
 #define SPI1_NSS_Pin GPIO_PIN_4
 #define SPI1_NSS_GPIO_Port GPIOA
+#define CCS811_SDA_Pin GPIO_PIN_9
+#define CCS811_SDA_GPIO_Port GPIOC
+#define CCS811_SCL_Pin GPIO_PIN_8
+#define CCS811_SCL_GPIO_Port GPIOA
+#define CCS811_IRQ_Pin GPIO_PIN_10
+#define CCS811_IRQ_GPIO_Port GPIOA
+#define CCS811_IRQ_EXTI_IRQn EXTI15_10_IRQn
+#define CCS811_WAKE_Pin GPIO_PIN_4
+#define CCS811_WAKE_GPIO_Port GPIOB
+#define CCS811_RST_Pin GPIO_PIN_5
+#define CCS811_RST_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
