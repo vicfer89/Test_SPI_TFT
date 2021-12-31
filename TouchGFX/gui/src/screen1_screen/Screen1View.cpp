@@ -20,5 +20,8 @@ void Screen1View::tearDownScreen()
 void Screen1View::handleTickEvent()
 {
 	gauge1.updateValue(CO2_Value, 0);
+	Unicode::snprintfFloat(textArea1Buffer, TEXTAREA1_SIZE, "%.0f", (float) CO2_Value);
+	textArea1.invalidate();
 	gauge1.invalidate();
+
 }

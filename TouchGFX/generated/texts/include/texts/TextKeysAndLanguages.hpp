@@ -6,11 +6,14 @@
 
 enum LANGUAGES
 {
+    GB,
     NUMBER_OF_LANGUAGES
 };
 
 enum TEXTS
 {
+    T___SINGLEUSE_6G19,
+    T___SINGLEUSE_LPB8,
     NUMBER_OF_TEXT_KEYS
 };
 

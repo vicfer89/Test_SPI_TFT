@@ -11,7 +11,6 @@
             "Y": -5,
             "Width": 251,
             "Height": 251,
-            "Style": "Style1",
             "FileNameBackground": "__designer\\Blue_Gauges_original_gauge_background_style_00.png",
             "RotationCenterX": 125,
             "RotationCenterY": 125,
@@ -104,6 +103,22 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 128,
+            "Y": 190,
+            "Width": 109,
+            "Height": 25,
+            "TextId": "__SingleUse_6G19",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_LPB8",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [

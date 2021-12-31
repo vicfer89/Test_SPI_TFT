@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase() :
     flexButtonCallback(this, &Screen1ViewBase::flexButtonCallbackHandler)
@@ -34,10 +35,19 @@ Screen1ViewBase::Screen1ViewBase() :
     flexButton2.setPosition(0, 190, 69, 50);
     flexButton2.setAction(flexButtonCallback);
 
+    textArea1.setXY(128, 190);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LPB8).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.resizeToCurrentText();
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6G19));
+
     add(__background);
     add(gauge1);
     add(flexButton1);
     add(flexButton2);
+    add(textArea1);
 }
 
 void Screen1ViewBase::setupScreen()
