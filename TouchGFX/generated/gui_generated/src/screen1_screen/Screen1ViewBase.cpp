@@ -16,8 +16,8 @@ Screen1ViewBase::Screen1ViewBase() :
     gauge1.setPosition(69, -5, 251, 251);
     gauge1.setCenter(125, 125);
     gauge1.setStartEndAngle(-90, 90);
-    gauge1.setRange(0, 100);
-    gauge1.setValue(50);
+    gauge1.setRange(400, 4000);
+    gauge1.setValue(400);
     gauge1.setNeedle(BITMAP_BLUE_NEEDLES_ORIGINAL_GAUGE_NEEDLE_STYLE_00_ID, 11, 55);
     gauge1.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
     gauge1.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
