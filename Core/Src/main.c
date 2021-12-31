@@ -56,6 +56,7 @@
 /* USER CODE BEGIN PV */
 ccs811_dev_t iaq_dev;
 volatile uint8_t f_CCS811_DataAvail;
+volatile int irq_counter;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -129,6 +130,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	 /* if(f_CCS811_DataAvail)
+	  {
+		  printf("[%d] Interupción lista\r\n", irq_counter);
+		  irq_counter = irq_counter + 1;
+		  f_CCS811_DataAvail = 0;
+	  }*/
+	  ccs811_status_t iaq_stat = ccs811_status(&iaq_dev);
+	  if(1 == iaq_stat.data_ready)
+	  {
+		  ccs811_alg_results_t data = ccs811_get_data(&iaq_dev);
+		  printf("[%d] eCO2: %u \t TVOC: %u \r\n", irq_counter, data.eCO2, data.TVOC);
+		  irq_counter++;
+	  }
     /* USER CODE END WHILE */
 
   MX_TouchGFX_Process();
