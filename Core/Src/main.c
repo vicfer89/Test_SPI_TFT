@@ -68,7 +68,11 @@ static uint8_t write_iaq_i2c(ccs811_dev_t *dev, uint8_t reg_addr, uint8_t *data,
 static void CCS811_Init(void);
 int __io_putchar(int ch)
 {
+#ifdef DEBUG_ITM
 	return ITM_SendChar(ch); // Comparator 0 Enabled y seleccionado bit 0 de ITM Stimulus Port
+#else
+	return ch;
+#endif
 }
 /* USER CODE END PFP */
 
