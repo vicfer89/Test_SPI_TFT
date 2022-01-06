@@ -5,119 +5,60 @@
         "Name": "Screen1",
         "Components": [
           {
-            "Type": "Gauge",
-            "Name": "gauge1",
-            "X": 69,
-            "Y": -5,
-            "Width": 251,
-            "Height": 251,
-            "FileNameBackground": "__designer\\Blue_Gauges_original_gauge_background_style_00.png",
-            "RotationCenterX": 125,
-            "RotationCenterY": 125,
-            "StartAngle": -90,
-            "EndAngle": 90,
-            "RangeMin": 400,
-            "RangeMax": 4000,
-            "InitialValue": 400,
-            "Easing": "Linear",
-            "EasingOption": "In",
-            "FileNameNeedle": "__designer\\Blue_Needles_original_gauge_needle_style_00.png",
-            "NeedleRotationCenterX": 11,
-            "NeedleRotationCenterY": 55,
-            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
-            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
-            "ArcColor": {
-              "Red": 20,
-              "Green": 151,
-              "Blue": 197
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Width": 320,
+            "Height": 69,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
-            "ArcCapStyle": "Butt"
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
-            "Width": 69,
-            "Height": 50,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 69,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButton2",
-            "Y": 190,
-            "Width": 69,
-            "Height": 50,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 69,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
+            "BorderSize": 5
           },
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 128,
-            "Y": 190,
-            "Width": 109,
-            "Height": 25,
+            "X": 16,
+            "Y": 10,
+            "Width": 243,
+            "Height": 49,
             "TextId": "__SingleUse_6G19",
             "TextRotation": "0",
             "AutoSize": true,
             "Wildcard1": {
-              "TextId": "__SingleUse_LPB8",
+              "TextId": "__SingleUse_IUO2",
               "UseBuffer": true,
-              "BufferSize": 10
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1",
+            "Y": 69,
+            "Width": 320,
+            "Height": 69,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 16,
+            "Y": 79,
+            "Width": 245,
+            "Height": 49,
+            "TextId": "__SingleUse_VAPY",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_MIK1",
+              "UseBuffer": true,
+              "BufferSize": 20
             }
           }
         ],
@@ -125,23 +66,19 @@
           {
             "InteractionName": "Interaction1",
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton2"
+              "Type": "TriggerClicked"
             },
             "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "gauge1"
+              "Type": "ActionHide"
             }
           },
           {
             "InteractionName": "Interaction2",
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton1"
+              "Type": "TriggerClicked"
             },
             "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "gauge1"
+              "Type": "ActionShow"
             }
           }
         ]

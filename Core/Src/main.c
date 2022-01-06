@@ -58,6 +58,7 @@ ccs811_dev_t iaq_dev;
 volatile uint8_t f_CCS811_DataAvail;
 volatile int irq_counter;
 volatile uint16_t CO2_Value = 400;
+volatile uint16_t TVOC_Value = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -147,6 +148,7 @@ int main(void)
 		  ccs811_alg_results_t data = ccs811_get_data(&iaq_dev);
 		  printf("[%d] eCO2: %u \t TVOC: %u \r\n", irq_counter, data.eCO2, data.TVOC);
 		  CO2_Value = data.eCO2; // Guardamos en variable global
+		  TVOC_Value = data.TVOC; // Guardamos en variable global
 		  irq_counter++;
 	  }
     /* USER CODE END WHILE */

@@ -13,6 +13,9 @@ public:
     virtual void tearDownScreen();
     virtual void handleTickEvent();
 protected:
+private:
+    void compute_CO2_range(void);
+    void compute_TVOC_range(void);
 };
 
 #endif // SCREEN1VIEW_HPP
